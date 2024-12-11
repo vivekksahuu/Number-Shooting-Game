@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --font-primary: "Orbitron", "Montserrat", sans-serif;
+  --background-gradient: linear-gradient(
+    to bottom,
+    royalblue,
+    rgba(0, 0, 0, 0.7)
+  );
+  --text-color: white;
+  --text-danger: red;
+  --button-bg: wheat;
+  --button-hover-bg: lightgoldenrodyellow;
+  --button-radius: 10px;
+  --container-border: 2px solid wheat;
+  --gap-size: 2rem;
+  --danger-number-color: red;
+  --main-container-width: 20vw;
+  --main-container-height: 25vh;
+  --number-size: 5vw;
+  --font-size-large: 1.5rem;
+  --font-size-medium: 1.2rem;
+  --player-container-font-size: 1.2em;
+  --font-weight-bold: 600;
+  --cursor-pointer: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-image: var(--background-gradient);
+  background-size: cover;
+}
+
+.game-hero-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: var(--text-color);
+}
+
+.winning-point-container {
+  text-align: center;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  margin-top: 1rem;
+  color: black;
+  letter-spacing: 0.1em;
+}
+
+.player-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em var(--gap-size);
+}
+
+.main-container-design {
+  border: 1px solid black;
+  min-width: var(--main-container-width);
+  height: var(--main-container-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  letter-spacing: 0.1em;
+  box-shadow: #242222 5px 5px;
+}
+
+.player-name {
+  font-size: var(--player-container-font-size);
+}
+
+.player-score {
+  font-size: var(--player-container-font-size);
+}
+.main-container-design button {
+  letter-spacing: 0.1em;
+  border-radius: var(--button-radius);
+  background-color: var(--button-bg);
+  padding: 0.3em 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.main-container-design button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.game-arena {
+  height: 25vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.numbers-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  width: 80vw;
+}
+
+.numbers-container .pop-out {
+  border: 2px solid black;
+  width: var(--number-size);
+  height: var(--number-size);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: var(--font-size-large);
+}
+
+.numbers-container .danger-number {
+  color: var(--text-danger);
+}
+
+.shooter-stand {
+  height: 100%;
+  width: 3vw;
+  background-color: var(--text-color);
+  cursor: var(--cursor-pointer);
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.laser {
+  background-color: white;
+  width: 1vw;
+  height: 1vh;
+  border-radius: 10px;
+}
+
+.restart-game {
+  text-align: center;
+}
+
+.restart-game button {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  background-color: green;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  border: none;
+  transition: background-color 0.3s;
+  visibility: hidden;
+}
+
+.player-switch-btn:disabled {
+  opacity: 0.9;
+}
+
+/* Active Player Container Style */
+.active {
+  background-color: #722b74;
+}

@@ -1,0 +1,576 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset & Global Properties */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Montserrat";
+}
+
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: linear-gradient(to bottom, royalblue, black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+/* Custom Properties */
+:root {
+  --title-font: "Orbitron";
+  --primary-font: "Poppins";
+  --border-radius: 10px;
+  --container-border: 1px solid white;
+  --button-padding: 0.5em 3em;
+  --input-bg: transparent;
+  --input-font-size: 1em;
+  --input-text-align: center;
+  --input-font-weight: 600;
+  --gap-small: 1rem;
+  --gap-large: 2rem;
+  --flex-center: center;
+  --flex-evenly: space-evenly;
+}
+
+/* Reusable Classes */
+.container-design {
+  border: var(--container-border);
+  border-radius: var(--border-radius);
+}
+
+.flex-evenly {
+  display: flex;
+  justify-content: var(--flex-evenly);
+  gap: var(--gap-large);
+}
+
+.flex-column-around-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: var(--flex-center);
+}
+
+.flex-around-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: var(--flex-center);
+}
+
+.container-title {
+  font-weight: 800;
+  font-size: 1rem;
+  font-family: var(--title-font);
+  letter-spacing: 0.1em;
+}
+
+button {
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+input {
+  background-color: var(--input-bg);
+  font-size: var(--input-font-size);
+  text-align: var(--input-text-align);
+  font-weight: var(--input-font-weight);
+  outline: none;
+}
+
+/* Specific Sections */
+.pre-game-setup {
+  gap: var(--gap-large);
+  min-height: 100vh;
+}
+
+.pre-game-setup .container-design {
+  border: var(--container-border);
+}
+
+.greeting-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.greeting-container .text-style {
+  font-family: var(--title-font);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+}
+
+.player-details .container-design {
+  width: 40vw;
+  height: 45vh;
+}
+
+.icon-container {
+  width: 100%;
+  height: 20vh;
+}
+
+.icon-container div {
+  width: 8vw;
+  height: 16vh;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.icon-container .two-player {
+  background-image: url("/images/2-player-icon.jpg");
+}
+
+.icon-container .three-player {
+  background-image: url("/images/3-player-icon");
+}
+
+.icon-container .four-player {
+  background-image: url("/images/4-player-icon.png");
+}
+
+.player-number-button-container {
+  width: 100%;
+  height: 10vh;
+}
+
+.player-number-button-container button {
+  padding: var(--button-padding);
+}
+
+.game-details .container-design {
+  width: 40vw;
+  height: 15vh;
+}
+
+.start-btn button {
+  padding: var(--button-padding);
+}
+
+.player-name-form-container {
+  gap: 5vh;
+  width: 60%;
+  height: 70%;
+}
+
+.player-name-form-container input {
+  border-radius: var(--border-radius);
+  padding: 0em 2em;
+  user-select: text;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.game-mode-container {
+  flex-direction: row;
+  justify-content: var(--flex-evenly);
+}
+
+.game-mode-container button {
+  padding: 0.5em 2em;
+}
+
+.point-setting-container {
+  display: flex;
+  justify-content: center;
+  align-items: var(--flex-center);
+  gap: var(--gap-small);
+  padding: 2em;
+}
+
+.point-setting-container .input {
+  color: white;
+  font-size: 1.2em;
+  padding: 0 0.4em;
+  margin-left: -1rem;
+  margin-top: 0.2rem;
+  letter-spacing: 0.08em;
+}
+
+/* media queries */
+@media (min-width: 750px) and (max-width: 1000px) {
+  .greeting-container .text-style {
+    font-size: 1rem;
+  }
+
+  .container-title {
+    font-size: 0.8rem;
+  }
+
+  .number-of-player .container-title {
+    margin-top: 1rem;
+  }
+
+  .icon-container div {
+    width: 10vw;
+    height: 15vh;
+  }
+
+  .icon-container {
+    margin-top: 1rem;
+  }
+
+  .player-number-button-container button {
+    padding: 0.1em 1.5em;
+    font-size: 0.9rem;
+  }
+
+  input {
+    font-size: 0.8rem;
+  }
+
+  .game-mode-container button {
+    padding: 0.2em 0.4em;
+    font-size: 0.8rem;
+  }
+
+  .point-setting-container .container-title {
+    line-height: 1.8;
+  }
+  .point-setting-container .input {
+    margin-top: 0.1rem;
+    font-size: 0.9rem;
+  }
+
+  .start-btn button {
+    padding: 0.5em 3em;
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1100px) {
+  .greeting-container .text-style {
+    font-size: 0.9rem;
+  }
+
+  .container-title {
+    font-size: 0.9rem;
+  }
+
+  .icon-container div {
+    width: 10vw;
+    height: 15vh;
+  }
+
+  .player-number-button-container button {
+    padding: 0.1em 2em;
+    font-size: 1em;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  .game-mode-container button {
+    padding: 0.2em 1em;
+    font-size: 0.9rem;
+  }
+
+  .point-setting-container .input {
+    font-size: 1rem;
+  }
+
+  .start-btn button {
+    padding: 0.5em 4em;
+    font-size: 0.8rem;
+  }
+}
+
+/* Large Laptopts */
+@media only screen and (min-width: 1550px) {
+  .greeting-container .text-style {
+    font-size: 2rem;
+  }
+
+  .player-details .container-design {
+    height: 50vh;
+  }
+
+  .container-design {
+    border: 3px solid white !important;
+  }
+
+  .container-title {
+    font-size: 1.8rem;
+  }
+
+  .icon-container div {
+    width: 10vw;
+    height: 14vh;
+  }
+
+  .player-number-button-container button {
+    border-radius: 20px;
+    padding: 0.5em 2em;
+    font-size: 1.5em;
+  }
+
+  input {
+    font-size: 2rem;
+  }
+
+  .game-mode-container button {
+    padding: 0.5em 0.5em;
+    font-size: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .point-setting-container .input {
+    font-size: 2em;
+  }
+
+  .start-btn button {
+    padding: 0.2em 3em;
+    font-size: 1.8rem;
+    border-radius: 20px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  input {
+    border-radius: 20px;
+  }
+  .icon-container div {
+    width: 9vw;
+    height: 19vh;
+  }
+
+  .player-number-button-container button {
+    padding: 0.5em 3em;
+  }
+  .game-mode-container button {
+    padding: 0.5em 3em;
+    font-size: 1.5rem;
+  }
+
+  .point-setting-container .input {
+    font-size: 2rem;
+  }
+}
+
+/* Media Queries for Mobiles */
+/* @media (min-width: 320px) and (max-width: 400px) {
+  .pre-game-setup {
+    justify-content: space-evenly;
+  }
+  .greeting-container .text-style {
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    gap: 0rem;
+  }
+
+  .player-details {
+    flex-direction: column;
+    margin-top: -0.5rem;
+  }
+
+  .container-title {
+    font-size: 0.6rem;
+  }
+
+  .player-details .number-of-player {
+    width: 80vw;
+    height: 15vh;
+  }
+
+  .icon-container {
+    display: none;
+  }
+
+  .player-number-button-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .player-number-button-container button {
+    padding: 0.2em 2em;
+    font-size: 0.7rem;
+  }
+
+  .player-details .player-names-container {
+    margin-top: -1rem;
+    width: 80vw;
+    height: 45vh;
+  }
+
+  input {
+    font-size: 0.7rem;
+  }
+
+  .game-details {
+    flex-direction: column;
+  }
+
+  .game-details .game-mode-container {
+    margin-top: -1rem;
+    width: 80vw;
+    height: 10vh;
+    justify-content: space-evenly;
+  }
+
+  .game-mode-container button {
+    padding: 0.1em 0.5em;
+    font-size: 0.7rem;
+  }
+
+  .game-details .point-setting-container {
+    margin-top: -1rem;
+    width: 80vw;
+    height: 3vh;
+  }
+
+  .point-setting-container .input {
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
+  }
+
+  .start-btn button {
+    padding: 0.5em 4em;
+    font-size: 0.7rem;
+  }
+} */
+
+/* @media (min-width: 400px) and (max-width: 550px) {
+  .pre-game-setup {
+    justify-content: space-evenly;
+  }
+  .greeting-container .text-style {
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    gap: 0rem;
+  }
+
+  .player-details {
+    flex-direction: column;
+    margin-top: -0.5rem;
+  }
+
+  .container-title {
+    font-size: 0.7rem;
+  }
+
+  .player-details .number-of-player {
+    width: 80vw;
+    height: 15vh;
+  }
+
+  .icon-container {
+    display: none;
+  }
+
+  .player-number-button-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .player-number-button-container button {
+    padding: 0.2em 2.5em;
+    font-size: 0.7rem;
+  }
+
+  .player-details .player-names-container {
+    margin-top: -1rem;
+    width: 80vw;
+    height: 45vh;
+  }
+
+  input {
+    font-size: 0.8rem;
+  }
+
+  .game-details {
+    flex-direction: column;
+  }
+
+  .game-details .game-mode-container {
+    margin-top: -1rem;
+    width: 80vw;
+    height: 10vh;
+    justify-content: space-evenly;
+  }
+
+  .game-mode-container button {
+    padding: 0.1em 1em;
+    font-size: 0.8rem;
+  }
+
+  .game-details .point-setting-container {
+    margin-top: -1rem;
+    width: 80vw;
+    height: 3vh;
+  }
+
+  .point-setting-container .input {
+    font-size: 0.8rem;
+    margin-top: 0.1rem;
+  }
+
+  .start-btn button {
+    padding: 0.5em 4em;
+    font-size: 0.7rem;
+  }
+} */
+
+/* @media (min-width: 550px) and (max-width: 750px) {
+  .greeting-container .text-style {
+    font-size: 0.8rem;
+  }
+
+  .container-title {
+    font-size: 0.7rem;
+  }
+
+  .number-of-player .container-title {
+    margin-top: 1rem;
+  }
+
+  .icon-container div {
+    width: 10vw;
+    height: 10vh;
+  }
+
+  .icon-container {
+    margin-top: 1rem;
+  }
+
+  .player-number-button-container button {
+    padding: 0.1em 1em;
+    font-size: 0.8rem;
+  }
+
+  input {
+    font-size: 0.7rem;
+  }
+
+  .game-mode-container button {
+    padding: 0.2em 0.5em;
+    font-size: 0.7rem;
+  }
+
+  .point-setting-container .container-title {
+    line-height: 1.5;
+  }
+  .point-setting-container .input {
+    margin-left: -1.1rem;
+    margin-top: 0.1rem;
+    font-size: 0.9rem;
+  }
+
+  .start-btn button {
+    padding: 0.5em 4em;
+    font-size: 0.7rem;
+  }
+} */

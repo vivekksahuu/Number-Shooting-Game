@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="/pre-game-setup/style.css" />
+
+    <!-- Link jQuery FILE -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Link JS SCRIPT FILE -->
+    <script src="/pre-game-setup/animation.js" defer></script>
+    <script src="/pre-game-setup/script.js" type="module" defer></script>
+
+    <title>Pre-Game Setup</title>
+  </head>
+  <body>
+    <section class="pre-game-setup flex-column-around-center">
+      <div class="greeting-container">
+        <p class="title text-style">Welcome Players!</p>
+        <p class="sub-title text-style">
+          Enter Details, and Let the Game Begin!
+        </p>
+      </div>
+      <!-- Player Details -->
+      <div class="player-details flex-evenly">
+        <!-- Number of Players Container -->
+        <div
+          class="number-of-player container-design flex-column-around-center"
+        >
+          <p class="container-title">Select Number of Players</p>
+          <div class="icon-container flex-around-center">
+            <div class="two-player"></div>
+            <div class="three-player"></div>
+            <div class="four-player"></div>
+          </div>
+          <div class="player-number-button-container flex-around-center">
+            <button class="button-two">Two</button>
+            <button class="button-three">Three</button>
+            <button class="button-four">Four</button>
+          </div>
+        </div>
+        <!-- Player Names Container -->
+        <div
+          class="player-names-container container-design flex-column-around-center"
+        >
+          <p class="container-title">Enter Player Names</p>
+          <form class="player-name-form-container flex-column-around-center">
+            <input
+              type="text"
+              maxlength="15"
+              class="player-name first-player"
+              placeholder="Enter First Player Name"
+            />
+            <input
+              type="text"
+              maxlength="15"
+              class="player-name second-player"
+              placeholder="Enter Second Player Name"
+            />
+            <input
+              type="text"
+              maxlength="15"
+              class="player-name third-player"
+              placeholder="Enter Third Player Name"
+            />
+            <input
+              type="text"
+              maxlength="15"
+              class="player-name fourth-player"
+              placeholder="Enter Fourth Player Name"
+            />
+          </form>
+        </div>
+      </div>
+      <!-- Game Details -->
+      <div class="game-details flex-evenly">
+        <!-- Game Mode -->
+        <div
+          class="game-mode-container container-design flex-column-around-center"
+        >
+          <p class="container-title">Select Mode:</p>
+          <button>One Shoot</button>
+          <button>Greedy</button>
+        </div>
+        <!-- Winning Point -->
+        <div class="point-setting-container container-design">
+          <p class="container-title">Set Winning Points:</p>
+          <span class="input" contenteditable="true">50</span>
+
+          <!-- <input type="number" name="" id="" value="50" /> -->
+        </div>
+      </div>
+      <div class="start-btn">
+        <button>Start</button>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="/common.css" />
+
+    <!-- Link jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Link JS SCRIPT FILE -->
+    <script src="/greedy-mode/greedy.js" type="module" defer></script>
+
+    <title>Number Shooting| Greedy Mode</title>
+  </head>
+
+  <body>
+    <main class="game-hero-container">
+      <!-- Winning Point Container -->
+      <section class="winning-point-container">
+        <div>
+          Winning Points:
+          <span class="point">30</span>
+        </div>
+      </section>
+      <section class="player-container">
+        <!-- First PLayer Container -->
+        <div class=" first-player-main-container main-container-design">
+          <p class=" first-player-name player-name">First Player Name</p>
+          <p class=" first-player-score player-score">0</p>
+          <button class="player-switch-btn">Save & Switch</button>
+        </div>
+        <!-- Second Player Container -->
+        <div class="second-player-main-container main-container-design">
+          <p class=" second-player-name player-name">Second Player Name</p>
+          <p class="second-player-score player-score">0</p>
+          <button class="player-switch-btn">Save & Switch</button>
+        </div>
+      </section>
+      <!-- Game Arena -->
+      <section class="game-arena">
+        <div class="numbers-container">
+          <button class="shooter-stand">
+            <div class="laser"></div>
+          </button>
+          <div class="pop-out">1</div>
+          <div class="pop-out">2</div>
+          <div class="danger-number pop-out">3</div>
+          <div class="pop-out">4</div>
+          <div class="danger-number pop-out">5</div>
+          <div class="pop-out">6</div>
+          <div class="danger-number pop-out">7</div>
+          <div class="pop-out">8</div>
+          <div class="danger-number pop-out">9</div>
+          <div class="pop-out">10</div>
+        </div>
+      </section>
+      <section class="player-container">
+        <!-- Third Player Container -->
+        <div class="third-player-main-container main-container-design">
+          <p class="third-player-name player-name">Third Player Name</p>
+          <p class="third-player-score player-score">0</p>
+          <button class="player-switch-btn">Save & Switch</button>
+        </div>
+        <!-- Fourth Player Container -->
+        <div class="fourth-player-main-container main-container-design">
+          <p class="fourth-player-name player-name">Fourth Player Name</p>
+          <p class="fourth-player-score player-score">0</p>
+          <button class="player-switch-btn">Save & Switch</button>
+        </div>
+      </section>
+
+      <div class="restart-game">
+        <button>Restart Game</button>
+      </div>
+    </main>
+  </body>
+</html>
