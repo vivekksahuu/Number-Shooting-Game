@@ -72,7 +72,7 @@ startGameBtn.click(function (event) {
     playerNameInputs.each(function () {
         let playerName = $(this).val().trim(); //remove white space from the string
         if (playerName) {
-            preGameInputs.playerNames.push(playerName);  // Capitalize function is called and all the player names will get add to empty array
+            preGameInputs.playerNames.push(playerName);  // add all the player names to playerNames array
         }
     });
 
